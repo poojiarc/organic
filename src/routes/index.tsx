@@ -1,26 +1,30 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Hero } from "@/components/Hero";
+import { AboutSection } from "@/components/AboutSection";
+import { ServicesSection } from "@/components/ServicesSection";
+import { CertStrip } from "@/components/CertStrip";
+import { ProductsGrid } from "@/components/ProductsGrid";
 
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "Organic Sogadu — Farmers Brand | Soil-Fresh Organic Food" },
+      { name: "description", content: "100% organic, chemical-free food from 350+ farmers, delivered fresh every Sunday across Karnataka." },
+      { property: "og:title", content: "Organic Sogadu — Farmers Brand" },
+      { property: "og:description", content: "Real food. Real impact. Pure organic goodness from farmers to you." },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Hero />
+      <CertStrip />
+      <AboutSection />
+      <ServicesSection />
+      <ProductsGrid />
+    </>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
