@@ -8,7 +8,15 @@ export type Product = {
   price?: number;
   unit?: string;
   emoji?: string;
+  image?: string;
 };
+
+import mangoImg from "@/assets/gallery/hand-mango.jpg";
+import mangoDessertImg from "@/assets/gallery/mango-dessert.jpg";
+import cashewImg from "@/assets/gallery/cashews.jpg";
+import honeyImg from "@/assets/gallery/honey.jpg";
+import productsImg from "@/assets/gallery/products-collage.jpg";
+import bookImg from "@/assets/gallery/book-products.jpg";
 
 export const PRODUCTS: Product[] = [
   { id: "mango-pulp", name: "Mango Pulp", desc: "Sun-ripened, hand-pulped — fragrance of childhood.", category: "must-try", price: 200, unit: "500ml", emoji: "🥭" },
