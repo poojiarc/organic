@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "@tanstack/react-router";
-import { Menu, X, ShoppingBag, Home, Info, Leaf, Image, Phone } from "lucide-react";
+import { Menu, X, ShoppingCart, Home, Info, Leaf, Image, Phone } from "lucide-react";
 import logo from "@/assets/logo.png";
 import { useCart } from "@/lib/cart";
 
@@ -59,7 +59,7 @@ export function Navbar() {
             aria-label="Open cart"
             className="relative rounded-full bg-secondary p-2.5 text-earth transition hover:bg-accent hover:text-accent-foreground"
           >
-            <ShoppingBag className="h-5 w-5" />
+            <ShoppingCart className="h-5 w-5" />
             {count > 0 && (
               <span className="absolute -right-1 -top-1 flex h-5 w-5 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground">
                 {count}

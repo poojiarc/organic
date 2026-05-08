@@ -6,6 +6,8 @@ export type CartItem = {
   variant?: string;
   price: number;
   qty: number;
+  image?: string;
+  emoji?: string;
 };
 
 type CartCtx = {

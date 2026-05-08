@@ -20,6 +20,8 @@ export function ProductCard({ product }: { product: Product }) {
       name: product.name,
       variant: variant?.label ?? product.unit,
       price: price!,
+      image: product.image,
+      emoji: product.emoji,
     };
     add(item);
   };
@@ -78,7 +80,7 @@ export function ProductCard({ product }: { product: Product }) {
           </div>
         ) : noPrice ? (
           <button
-            onClick={() => add({ id, name: product.name, variant: product.unit, price: 0 })}
+            onClick={() => add({ id, name: product.name, variant: product.unit, price: 0, image: product.image, emoji: product.emoji })}
             className="rounded-full bg-secondary px-3 py-2 text-xs font-semibold text-foreground hover:bg-accent hover:text-accent-foreground"
           >
             Add to enquiry
