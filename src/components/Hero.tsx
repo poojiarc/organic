@@ -41,7 +41,7 @@ export function Hero() {
       <div className="absolute inset-0 gradient-hero" />
       <div className="relative z-10 mx-auto flex h-full max-w-6xl flex-col items-center justify-center px-6 text-center text-cream">
         <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-cream/30 bg-cream/10 px-4 py-1.5 text-xs font-medium uppercase tracking-widest backdrop-blur animate-fade-in">
-          <Leaf className="h-3.5 w-3.5 text-accent" /> Farmers Brand · Marketed by Noways Toxic
+          <Leaf className="h-3.5 w-3.5 text-accent" /> Farmers Brand · MARKETED BY : NOWAYS TOXIC
         </span>
         <h1 className="font-display text-4xl font-bold leading-tight md:text-7xl animate-fade-up">
           Pure Organic Goodness <br />

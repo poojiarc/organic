@@ -1,5 +1,6 @@
 import { Sprout, HandHeart, Truck, ShieldCheck } from "lucide-react";
 import farmers from "@/assets/gallery/farmers-group.jpg";
+import farmersSteps from "@/assets/gallery/farmers-steps.jpg";
 import farmerCow from "@/assets/gallery/farmer-cow.jpg";
 
 const features = [
@@ -13,12 +14,18 @@ export function AboutSection() {
   return (
     <section id="about" className="relative overflow-hidden bg-background py-20">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-2 lg:items-center">
-        <div className="relative">
-          <img src={farmers} alt="Farmers we support" className="aspect-[4/5] w-full rounded-3xl object-cover shadow-soft" />
-          <img src={farmerCow} alt="Farmer with cow" className="absolute -bottom-8 -right-4 hidden aspect-square w-48 rounded-2xl border-4 border-background object-cover shadow-soft md:block" />
+        <div className="space-y-6">
+          <div className="relative overflow-hidden rounded-3xl shadow-soft">
+            <img src={farmersSteps} alt="Farmer community" className="w-full h-auto object-contain bg-cream/5" />
+          </div>
         </div>
         <div>
-          <span className="font-script text-2xl text-primary">Our Story</span>
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-script text-2xl text-primary">Our Story</span>
+            <span className="rounded-full bg-primary/10 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-primary">
+              MARKETED BY : NOWAYS TOXIC
+            </span>
+          </div>
           <h2 className="mt-1 font-display text-4xl font-bold text-earth md:text-5xl">
             Honoring the hands that feed us.
           </h2>

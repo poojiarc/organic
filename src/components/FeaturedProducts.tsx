@@ -7,7 +7,7 @@ export function FeaturedProducts() {
   const featured = PRODUCTS.filter((p) => p.category === "must-try").slice(0, 4);
 
   return (
-    <section className="bg-background py-20">
+    <section id="must-try" className="bg-background py-20">
       <div className="mx-auto max-w-7xl px-4 md:px-8">
         <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row md:items-end">
           <div className="text-center md:text-left">
