@@ -26,8 +26,17 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="group relative flex flex-col overflow-hidden rounded-2xl border bg-card p-5 shadow-card transition-all hover:-translate-y-1 hover:shadow-soft">
-      <div className="mb-3 flex h-28 items-center justify-center rounded-xl bg-secondary text-6xl transition group-hover:scale-110">
-        <span aria-hidden>{product.emoji ?? "🌿"}</span>
+      <div className="mb-3 flex h-32 items-center justify-center overflow-hidden rounded-xl bg-secondary text-6xl">
+        {product.image ? (
+          <img
+            src={product.image}
+            alt={product.name}
+            loading="lazy"
+            className="h-full w-full object-cover transition group-hover:scale-110"
+          />
+        ) : (
+          <span aria-hidden className="transition group-hover:scale-110">{product.emoji ?? "🌿"}</span>
+        )}
       </div>
       <h3 className="font-display text-lg font-semibold text-earth">{product.name}</h3>
       <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">{product.desc}</p>

@@ -1,8 +1,13 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Phone, Mail, MapPin, Heart } from "lucide-react";
+import {
+  Instagram, Phone, Mail, MapPin, Heart,
+  Home, Info, ShoppingBasket, Image as ImageIcon, MessageCircle,
+  Truck, CalendarCheck, HandHeart, Leaf,
+} from "lucide-react";
 import logo from "@/assets/logo.png";
 
 export function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer className="mt-16 border-t bg-earth text-cream">
       <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:grid-cols-4">
@@ -21,20 +26,20 @@ export function Footer() {
         <div>
           <h4 className="mb-3 font-display text-base font-semibold">Quick Links</h4>
           <ul className="space-y-2 text-sm text-cream/80">
-            <li><Link to="/" className="hover:text-accent">Home</Link></li>
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/products" className="hover:text-accent">Products</Link></li>
-            <li><Link to="/gallery" className="hover:text-accent">Gallery</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
+            <li><Link to="/" className="flex items-center gap-2 hover:text-accent"><Home className="h-4 w-4" /> Home</Link></li>
+            <li><Link to="/about" className="flex items-center gap-2 hover:text-accent"><Info className="h-4 w-4" /> About</Link></li>
+            <li><Link to="/products" className="flex items-center gap-2 hover:text-accent"><ShoppingBasket className="h-4 w-4" /> Products</Link></li>
+            <li><Link to="/gallery" className="flex items-center gap-2 hover:text-accent"><ImageIcon className="h-4 w-4" /> Gallery</Link></li>
+            <li><Link to="/contact" className="flex items-center gap-2 hover:text-accent"><MessageCircle className="h-4 w-4" /> Contact</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="mb-3 font-display text-base font-semibold">Services</h4>
           <ul className="space-y-2 text-sm text-cream/80">
-            <li>Organic Food Supply</li>
-            <li>Fresh Weekly Delivery</li>
-            <li>Farmer Support Initiative</li>
-            <li>No Chemicals · No Preservatives</li>
+            <li className="flex items-center gap-2"><Leaf className="h-4 w-4" /> Organic Food Supply</li>
+            <li className="flex items-center gap-2"><Truck className="h-4 w-4" /> Fresh Weekly Delivery</li>
+            <li className="flex items-center gap-2"><HandHeart className="h-4 w-4" /> Farmer Support Initiative</li>
+            <li className="flex items-center gap-2"><CalendarCheck className="h-4 w-4" /> No Chemicals · No Preservatives</li>
           </ul>
         </div>
         <div>
@@ -51,9 +56,26 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="border-t border-cream/10 py-5 text-center text-sm text-cream/70">
-        Made with <Heart className="inline h-4 w-4 fill-accent text-accent" /> by{" "}
-        <a href="#" className="font-semibold text-accent hover:underline">StaffArc</a>
+      <div className="border-t border-cream/10">
+        <div className="mx-auto flex max-w-7xl flex-col items-center justify-center gap-2 px-4 py-5 text-center text-xs text-cream/70 md:px-6">
+          <p>© {year} Organic Sogadu. All rights reserved.</p>
+          <div className="flex items-center justify-center gap-1">
+            Made with <Heart className="inline h-4 w-4 mx-1 fill-red-500 text-red-500" /> by
+            <a
+              href="https://staffarc.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1 text-orange-400 hover:underline"
+            >
+              <img
+                src="https://www.staffarc.in/images/Staffarc-logo.png"
+                alt="StaffArc logo"
+                className="h-5 w-5 object-contain"
+              />
+              StaffArc
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
