@@ -63,4 +63,3 @@ export const PRODUCTS: Product[] = [
 
 // Reference images kept available for future product cards
 export const BRAND_IMAGES = { mangoImg, bookImg };
-];
